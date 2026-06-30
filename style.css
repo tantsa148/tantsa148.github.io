@@ -1,34 +1,49 @@
-body {
-    background-color: #23296b; /* Applique la couleur noire */
-    color: #ffffff;            /* Force le texte de base en blanc pour qu'il soit lisible */
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
+/* ==========================================================================
+   1. GLOBALISATION & VARIABLES (Reset et Typographie globale)
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    background-color: #12115c; 
+    color: #ffffff;            
+    font-family: Arial, sans-serif; /* Centralisation de la police globale */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
 
+/* Globalisation de la taille et du style des paragraphes <p> */
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+/* Classe structurelle pour les conteneurs alignés */
+.container {
+    width: calc(100% - 20px);
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION
+   ========================================================================== */
 .mon-header {
-    width: calc(100% - 10px);
     height: 62px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 0 80px;
     margin: 10px auto;
-
-    background-color: #191a27;
-
+    background-color: #191a27; /* Couleur de référence demandée */
     border-radius: 14px;
-
-    /**box-shadow: 0 4px 8px rgba(236, 235, 235, 0.35);**/
 }
+
 .menu a {
     text-decoration: none;
     color: #f7f4f4;
@@ -36,39 +51,21 @@ body {
     font-family: Verdana, sans-serif;
     font-size: 18px;
 }
-/* Quand l'écran fait moins de 768px de large (Tablettes et Smartphones) */
-@media (max-width: 768px) {
-    .mon-header {
-        padding: 0 16px; /* On réduit encore un peu l'espace sur les bords */
-    }
 
-    /* Option Simple : Réduire la taille du texte et l'espace pour que tout tienne */
-    .menu a {
-        font-size: 14px;
-        margin-left: 12px;
-    }
-}
-
-/* Quand l'écran est vraiment très petit (Moins de 480px pour les petits téléphones) */
-@media (max-width: 480px) {
-    /* Si les liens débordent encore, on peut par exemple cacher le texte du menu 
-       et prévoir un menu burger (ou simplement masquer certains liens secondaires) */
-    .mon-header {
-        /* On peut réduire légèrement la police si besoin */
-    }
-}
-/* ---- PRESENTATION ---- */
+/* ==========================================================================
+   3. SECTION PRESENTATION (Inchangée selon tes consignes)
+   ========================================================================== */
 .presentation {
     width: 100%;
     min-height: auto;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* 👈 PAS center */
+    align-items: flex-start; 
 
-    padding: 80px 250px 0 250px; /* 👈 espace sous header */
+    padding: 80px 250px 0 100px; 
     gap: 40px;
 }
-/* TEXTE */
+
 .gauche {
     max-width: 600px;
 }
@@ -100,7 +97,6 @@ body {
     line-height: 1.6; 
 }
 
-/* BOUTON */
 .bouton-action {
     display: inline-block;
     text-decoration: none;
@@ -120,7 +116,6 @@ body {
     transform: translateY(-2px); 
 }
 
-/* PHOTO */
 .droite {
     display: flex;
     justify-content: center;
@@ -140,41 +135,118 @@ body {
     height: 100%;
     object-fit: cover;
 }
-/* ---- RESPONSIVE : Pour les écrans de téléphones ---- */
-/**@media (max-width: 768px) {
-    .presentation {
-        flex-direction: column; /* photo AU-DESSUS 
-        align-items: center;
 
-        padding: 30px 20px;
-        margin-top: 62px;
-    }
+/* ==========================================================================
+   4. SECTION A PROPOS (Harmonisée avec la couleur du header)
+   ========================================================================== */
 
-    .droite {
-        order: -1; /* 🔥 force la photo en premier 
-    }
+.a-propos {
+    padding: 80px 0; /* Espace vertical autour de la carte */
+    background-color: #12115c; /* Même fond sombre que le body */
+}
 
-    .cadre-photo {
-        width: 200px;
-        height: 200px;
-    }
-}**/
+/* C'est ce bloc qui prend l'apparence du header */
+.carte-apropos {
+    background-color: #191a27; /* Couleur de fond du header */
+    border-radius: 14px;       /* Même arrondi que le header */
+    padding: 50px 100px;        /* Espacement interne généreux à l'intérieur de la carte */
+    /* Optionnel : Tu peux décommenter l'ombre en dessous si tu veux du relief */
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); */
+}
+
+.titre-section {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.titre-section h2 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.ligne {
+    width: 90px;
+    height: 4px;
+    background: #007acc;
+    margin: left;
+    border-radius: 20px;
+}
+
+.contenu-apropos {
+    display: flex;
+    justify-content: space-between; /* Aligne un bloc à gauche, un à droite */
+    align-items: flex-start;        /* Aligne le haut des deux blocs */
+    gap: 40px;                      /* Espace de séparation entre les deux blocs */
+    width: 100%;
+}
+
+/* Bloc de gauche (les paragraphes de texte) */
+.texte-apropos {
+    flex: 1; /* Prend exactement la moitié de l'espace disponible (1/2) */
+}
+/* Bloc de droite (les cases d'informations) */
+.infos-apropos {
+    flex: 1; /* Prend aussi exactement la moitié de l'espace disponible (1/2) */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espace vertical entre chaque case d'info */
+}
+.texte-apropos p {
+    margin-bottom: 25px; /* Conserve l'espacement entre les paragraphes */
+}
+
+
+/* Ajustement Responsive pour la carte */
 @media (max-width: 768px) {
+    .carte-apropos {
+        padding: 30px 20px; /* Réduction des espaces sur mobile */
+    }
+
+    .contenu-apropos {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+/* ==========================================================================
+   5. RESPONSIVE DESIGN (Media Queries regroupées)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Header */
+    .mon-header {
+        padding: 0 16px;
+    }
+
+    .menu a {
+        font-size: 14px;
+        margin-left: 12px;
+    }
+
+    /* Présentation */
     .presentation {
         flex-direction: column;
         align-items: center;
-
-        padding: 30px 20px;
-        gap: 20px; /* 🔥 contrôle l’espace entre photo et texte */
+        padding: 20px 20px;
+        gap: 20px; 
     }
 
     .droite {
         margin: 0;
-      order: -1;   
+        order: -1;   
     }
 
     .cadre-photo {
         width: 200px;
         height: 200px;
     }
+
+    /* À Propos Mobile */
+    .contenu-apropos {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustements pour très petits écrans si nécessaire */
 }
