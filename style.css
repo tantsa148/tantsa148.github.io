@@ -38,10 +38,11 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 80px;
+    padding: 0 100px;
     margin: 10px auto;
     background-color: #191a27; /* Couleur de référence demandée */
     border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
 }
 
 .menu a {
@@ -62,7 +63,7 @@ p {
     justify-content: space-between;
     align-items: flex-start; 
 
-    padding: 80px 250px 0 100px; 
+    padding: 80px 250px 0 160px; 
     gap: 40px;
 }
 
@@ -141,7 +142,7 @@ p {
    ========================================================================== */
 
 .a-propos {
-    padding: 80px 0; /* Espace vertical autour de la carte */
+    padding: 60px 0; /* Espace vertical autour de la carte */
     background-color: #12115c; /* Même fond sombre que le body */
 }
 
@@ -151,7 +152,7 @@ p {
     border-radius: 14px;       /* Même arrondi que le header */
     padding: 50px 100px;        /* Espacement interne généreux à l'intérieur de la carte */
     /* Optionnel : Tu peux décommenter l'ombre en dessous si tu veux du relief */
-    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); */
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
 }
 
 .titre-section {
@@ -208,6 +209,92 @@ p {
         gap: 40px;
     }
 }
+
+/* ==========================================================================
+   5. SECTION PROJETS (Parfaitement harmonisée)
+   ========================================================================== */
+
+.projets {
+    padding: 10px 0; /* Même espace vertical */
+    background-color: #12115c; /* Même fond sombre */
+}
+
+.carte-projets {
+    background-color: #191a27; /* Même fond de carte que le header et à-propos */
+    border-radius: 14px;       /* Même arrondi */
+    padding: 50px 100px;       /* Même espacement interne généreux */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.contenu-projets {
+    display: flex;
+    justify-content: space-between; /* Aligne les 3 cartes proprement */
+    align-items: stretch;           /* Force toutes les cartes à avoir la même hauteur */
+    gap: 30px;                      /* Espace de séparation entre les 3 projets */
+    width: 100%;
+}
+
+/* Style de chaque projet individuel */
+.carte-projet {
+    flex: 1; /* Distribue l'espace équitablement (1/3 chacun) */
+    background-color: #1c1d2f; /* Version légèrement plus claire pour détacher les cartes du fond */
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 122, 204, 0.1); /* Discrète bordure bleue */
+}
+
+.carte-projet h3 {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.carte-projet p {
+    color: #a0a5c1; /* Couleur de texte douce pour les descriptions */
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Ajustement Responsive pour les projets */
+@media (max-width: 992px) {
+    .carte-projets {
+        padding: 40px 40px; /* Réduction progressive sur tablettes */
+    }
+    
+    .contenu-projets {
+        flex-direction: column; /* Les projets s'empilent verticalement sur petits écrans */
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carte-projets {
+        padding: 30px 20px; /* Même réduction mobile que l'à-propos */
+    }
+}
+/* Style du conteneur de l'image */
+.image-projet {
+    width: 100%;
+    height: 180px;          /* Fixe une hauteur identique pour que tes 3 cartes soient uniformes */
+    overflow: hidden;       /* Coupe ce qui dépasse si l'image est trop grande */
+    border-radius: 6px;     /* Un léger arrondi pour coller au style moderne */
+    margin-bottom: 15px;    /* Espace entre l'image et la description en dessous */
+}
+
+/* Style de l'image elle-même */
+.image-projet img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* L'image remplit l'espace sans se déformer (comme un fond) */
+    object-position: center;/* Centre l'image dans son cadre */
+    transition: transform 0.3s ease; /* Optionnel : petit effet fluide au survol */
+}
+
+/* Optionnel : Effet zoom au survol de la carte */
+.carte-projet:hover .image-projet img {
+    transform: scale(1.05);
+}
+
 /* ==========================================================================
    5. RESPONSIVE DESIGN (Media Queries regroupées)
    ========================================================================== */
