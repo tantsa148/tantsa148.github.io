@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <header class="mon-header container">
+        <div class="logo">Mon portfolio</div>
+    <button class="burger-menu" id="burgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <!-- Votre menu existant -->
+    <nav class="menu" id="navMenu">
+        <a href="#about">Accueil</a>
+        <a href="#projects">Projets</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    </header>
+
+    <section class="presentation">
+        <div class="gauche">
+            <h1>Bonjour, je suis <span class="nom">Tsanta</span></h1>
+            <h2 class="shimmer-text">Développeur WEB</h2>
+            <p>Passionné par la création d'applications web et de solutions innovantes. Bienvenue sur mon portfolio.</p>
+            
+            <!-- Nouveau conteneur pour aligner les boutons -->
+            <div class="conteneur-boutons">
+                <a href="Assets/tsanta_cv.pdf" class="bouton-action" download="Tsanta CV.pdf" target="_blank">Voir mon CV</a>
+                <a href="#contact" class="bouton-action bouton-secondaire">Me contacter</a>
+            </div>
+        </div>
+      <div class="droite">
+          <div class="cadre-photo">
+              <img src="Assets/Tsanta.png" alt="Tsanta pic's">
+          </div>
+      </div>
+    </section>
+
+    <section class="a-propos" id="about">
+
+      <div class="carte-apropos container">
+
+          <div class="titre-section">
+              <h2>À propos de moi</h2>
+              <div class="ligne"></div>
+          </div>
+
+          <div class="contenu-apropos">
+
+              <div class="texte-apropos">
+                  <p>
+                      Je suis un développeur web passionné par la création
+                      d'applications modernes, performantes et intuitives.
+                      J'aime apprendre de nouvelles technologies et relever
+                      des défis qui me permettent d'améliorer mes compétences.
+                  </p>
+
+                  <p>
+                      Actuellement, je travaille principalement avec
+                      Java, Spring Boot, Thymeleaf, HTML, CSS, JavaScript
+                      et Git. Je cherche continuellement à développer des
+                      projets qui apportent une réelle valeur aux utilisateurs.
+                  </p>
+              </div>
+              <div class="infos-apropos">
+                  <p>
+                      Je suis un développeur web passionné par la création
+                      d'applications modernes, performantes et intuitives.
+                      J'aime apprendre de nouvelles technologies et relever
+                      des défis qui me permettent d'améliorer mes compétences.
+                  </p>
+
+                  <p>
+                      Actuellement, je travaille principalement avec
+                      Java, Spring Boot, Thymeleaf, HTML, CSS, JavaScript
+                      et Git. Je cherche continuellement à développer des
+                      projets qui apportent une réelle valeur aux utilisateurs.
+                  </p>
+              </div>
+
+          </div>
+
+      </div>
+
+    </section>
+
+    <section class="projets" id="projects">
+
+        <div class="carte-projets container">
+
+            <div class="titre-section">
+                <h2>Mes Projets</h2>
+                <div class="ligne"></div>
+            </div>
+
+            <div class="contenu-projets">
+
+                <!-- Projet 1 -->
+                <div class="carte-projet projet-1">
+                    <h3>jeux de points</h3>
+                    <div class="image-projet">
+                        <img src="chemin/vers/ton-image1.jpg" alt="Aperçu du Projet 1">
+                    </div>
+                    <p>
+                        Une description claire de ton premier projet. Tu peux parler de 
+                        l'objectif de l'application, du problème qu'elle résout et 
+                        des fonctionnalités clés.
+                    </p>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="carte-projet projet-2">
+                    <h3>Nom du Projet 2</h3>
+                    <div class="image-projet">
+                        <img src="chemin/vers/ton-image1.jpg" alt="Aperçu du Projet 1">
+                    </div>                    
+                    <p>
+                        Description de ton deuxième projet. Idéal pour mettre en avant 
+                        une autre facette de tes compétences, comme une architecture 
+                        différente ou de nouveaux outils.
+                    </p>
+                </div>
+
+                <!-- Projet 3 -->
+                <div class="carte-projet projet-3">
+                    <h3>Nom du Projet 3</h3>
+                    <div class="image-projet">
+                        <img src="chemin/vers/ton-image1.jpg" alt="Aperçu du Projet 1">
+                    </div>                    
+                    <p>
+                        Description de ton troisième projet. Mets en avant les défis 
+                        techniques que tu as relevés ou l'impact de la solution que 
+                        tu as développée.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="competences" id="skills">
+
+        <div class="carte-competences container">
+
+            <div class="titre-section">
+                <h2>Mes Compétences</h2>
+                <div class="ligne"></div>
+            </div>
+
+            <div class="contenu-competences">
+
+                <!-- Catégorie 1 : Backend -->
+                <div class="categorie-competence">
+                    <h3>Backend & Bases de données</h3>
+                    <div class="liste-badges">
+                        <span class="badge">Java</span>
+                        <span class="badge">Spring Boot</span>
+                        <span class="badge">C# (.NET)</span>
+                        <span class="badge">PHP (Laravel)</span>
+                        <span class="badge">PostgreSQL</span>
+                        <span class="badge">SQL Server</span>
+                    </div>
+                </div>
+
+                <!-- Catégorie 2 : Frontend -->
+                <div class="categorie-competence">
+                    <h3>Frontend & UI</h3>
+                    <div class="liste-badges">
+                        <span class="badge">HTML5</span>
+                        <span class="badge">CSS3</span>
+                        <span class="badge">JavaScript</span>
+                        <span class="badge">TypeScript</span>
+                        <span class="badge">React</span>
+                        <span class="badge">Thymeleaf</span>
+                    </div>
+                </div>
+
+                <!-- Catégorie 3 : Outils & Environnement -->
+                <div class="categorie-competence">
+                    <h3>Outils & Méthodes</h3>
+                    <div class="liste-badges">
+                        <span class="badge">Git & GitHub</span>
+                        <span class="badge">Docker</span>
+                        <span class="badge">Vite</span>
+                        <span class="badge">Tkinter (Python)</span>
+                        <span class="badge">Architecture MVC</span>
+                        <span class="badge">Travail en Équipe</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="footer" id="contact">
+    
+        <div class="contenu-footer container">
+            <!-- Colonne 1 -->
+            <div class="colonne-footer">
+                <h3>Tsanta</h3>
+                <p>Développeur web et logiciel passionné par la création d'applications modernes, performantes et la résolution de défis techniques.</p>
+            </div>
+
+            <!-- Colonne 2 -->
+            <div class="colonne-footer">
+                <h3>Me Contacter</h3>
+                <div class="ligne-footer"></div>
+                <ul class="liste-contacts">
+                    <li><span class="icone">📧</span> <a href="mailto:ton.email@gmail.com">ton.email@gmail.com</a></li>
+                    <li><span class="icone">📱</span> <span>+261 3X XX XX XX</span></li>
+                    <li><span class="icone">📍</span> <span>Antananarivo, Madagascar</span></li>
+                </ul>
+            </div>
+
+            <!-- Colonne 3 -->
+            <div class="colonne-footer">
+                <h3>Réseaux</h3>
+                <div class="ligne-footer"></div>
+                <ul class="liens-reseaux">
+                    <li><a href="https://github.com/ton-github" target="_blank">🐙 GitHub</a></li>
+                    <li><a href="https://linkedin.com/in/ton-linkedin" target="_blank">💼 LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section copyright tout en bas -->
+        <div class="copyright-footer">
+            <div class="container">
+                <p>&copy; 2026 Tsanta. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+<script>
+    const burgerBtn = document.getElementById('burgerBtn');
+const navMenu = document.getElementById('navMenu');
+
+burgerBtn.addEventListener('click', () => {
+    // On ajoute/enlève la classe active au menu ET au bouton burger
+    burgerBtn.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
+// Optionnel : Fermer le menu quand on clique sur un lien
+document.querySelectorAll('.menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        burgerBtn.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
+});
+</script>    
+</body>
+</html>
