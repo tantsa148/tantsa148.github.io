@@ -1,0 +1,9 @@
+{
+  "about": {
+    "title": "À propos de moi",
+    "description": "Je suis développeur web spécialisé en Java Spring Boot, Vue.js et PostgreSQL."
+  },
+  "skills": {
+    "description": "Je développe des applications web modernes et performantes."
+  }
+}

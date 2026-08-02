@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
@@ -48,7 +48,7 @@
       <div class="carte-apropos container">
 
           <div class="titre-section">
-              <h2>À propos de moi</h2>
+              <h2 id="about-title"></h2>
               <div class="ligne"></div>
           </div>
 
@@ -217,9 +217,22 @@
                 <h3>Me Contacter</h3>
                 <div class="ligne-footer"></div>
                 <ul class="liste-contacts">
-                    <li><span class="icone">📧</span> <a href="mailto:ton.email@gmail.com">ton.email@gmail.com</a></li>
-                    <li><span class="icone">📱</span> <span>+261 3X XX XX XX</span></li>
-                    <li><span class="icone">📍</span> <span>Antananarivo, Madagascar</span></li>
+                    <li>
+                        <span class="icone"><i class="fa-solid fa-envelope"></i></span>
+                        <a href="mailto:tsantarakotoarimanga14@gmail.com">
+                            tsantarakotoarimanga14@gmail.com
+                        </a>
+                    </li>
+
+                    <li>
+                        <span class="icone"><i class="fa-solid fa-phone"></i></span>
+                        <span>+261 38 36 625 12</span>
+                    </li>
+
+                    <li>
+                        <span class="icone"><i class="fa-solid fa-location-dot"></i></span>
+                        <span>Antananarivo, Madagascar</span>
+                    </li>
                 </ul>
             </div>
 
@@ -228,8 +241,14 @@
                 <h3>Réseaux</h3>
                 <div class="ligne-footer"></div>
                 <ul class="liens-reseaux">
-                    <li><a href="https://github.com/ton-github" target="_blank">🐙 GitHub</a></li>
-                    <li><a href="https://linkedin.com/in/ton-linkedin" target="_blank">💼 LinkedIn</a></li>
+                    <li>
+                         <span class="icone"><i class="fa-brands fa-github"></i></span>
+                        <a href="https://github.com/tantsa148" target="_blank">GitHub</a>
+                    </li>
+                    <li>
+                         <span class="icone"><i class="fa-brands fa-linkedin"></i></span>
+                        <a href="https://linkedin.com/in/ton-linkedin" target="_blank">LinkedIn</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -258,6 +277,12 @@ document.querySelectorAll('.menu a').forEach(link => {
         navMenu.classList.remove('active');
     });
 });
+fetch("data.json")
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("about-title").textContent = data.about.title;
+    })
+    .catch(error => console.error(error));
 </script>    
 </body>
 </html>
