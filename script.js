@@ -33,4 +33,4 @@ let index = 0;
 setInterval(() => {
     index = (index + 1) % images.length;
     document.getElementById("aboutImage").src = images[index];
-}, 2000);
+}, 1500);
