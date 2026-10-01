@@ -21,3 +21,16 @@ fetch("data.json")
         document.getElementById("about-description").textContent = data.about.description;
     })
     .catch(error => console.error(error));
+
+const images = [
+    "./Assets/about/1.jpg",
+    "./Assets/about/2.jpg",
+    "./Assets/about/3.jpg"
+];
+
+let index = 0;
+
+setInterval(() => {
+    index = (index + 1) % images.length;
+    document.getElementById("aboutImage").src = images[index];
+}, 2000);
